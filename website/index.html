@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product page</title>  <!-- Title of the page -->
+    <link rel="stylesheet" href="./CSS/style.css">  <!-- Link to my css file -->
+    <!-- Link to fontawesome.com to use icons: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav id="topnav">  <!-- First navbar -->
+        <ul>
+          <li><a href="checkout.html">Checkout</a></li>   <!-- Added link to checkout.html file -->
+          <li><a href="#">Basket</a></li>     <!-- Item of the first navbar -->
+          <li><a href="#">My Account</a></li>      <!-- Item of the first navbar -->
+        </ul>
+      </nav>
+      <address>   <!-- address tag to put the contact details -->
+         <i class="fas fa-mobile-alt"></i>   <!-- phone icon -->
+         <a href="tel:+3530614486165">+353 (0)61 4486165</a>  <!-- added 'tel:' to href to open a phone dialler -->
+         <i class="fas fa-at"></i>   <!-- @ icon -->
+         <a href="mailto:info@millflowers.ie">info@millflowers.ie</a>  <!-- added 'mailto:' to href to open an email client -->
+      </address>
+      <a href="#"><img src="./images/logo3.png" alt=""></a>    <!-- used anchor tag to make the photo clickable -->
+      <p><em>ARTISAN FLOWER ARRANGEMENTS YOU WILL LOVE</em></p>  <!-- made italic -->
+      <nav id = "navbar-2">   <!-- my second navbar -->
+        <ul>
+          <li><a href="#">HOME</a></li>  <!-- Item of the second navbar -->
+          <li><a href="#">ABOUT US</a></li>    <!-- Item of the second navbar -->
+          <li><a href="index.html">BUY ONLINE</a></li>   <!-- Added link to product.html file -->
+          <li><a href="#">WEDDINGS</a></li>   <!-- Item of the second navbar -->
+          <li><a href="#">CONTACT US</a></li>   <!-- Item of the second navbar -->
+       </ul>
+     </nav>
+    </header>
+    <main>
+      <section id = "box-container">  <!-- used display: flex in this tag -->
+        <a href="#"><img id = "box1" src="./images/lily500.png" alt=""></a>  <!-- one item of the flexbox -->
+        <aside>  <!-- the other item of the flexbox -->
+          <h1>Vibrant Lily Basket</h1>
+          <p>Vibrant orange asiatic lilies in a wicker basket</p>
+          <p>These flowers are naturally complemented by the deep green shades
+          of oregonia and nestled in a resuable rustic wicker basket-sure to
+          add an inviting touch to any space!</p>
+          <p>Price: €49.99</p>
+          <hr>  <!-- to put a horizontal line -->
+          <form action="checkout.html" method="post">   <!-- 'Order Now' button is linked to checkout.html' -->
+            <p><strong>Choose delivery or pickup</strong></p>
+            <label for="drop-down">Order Type</label>
+            <select id="drop-down">  <!-- created a drop down list -->
+              <option value="delivery">Delivery</option>  <!-- item of the drop down list -->
+              <option value="takeaway">Takeaway</option>  <!-- item of the drop down list -->
+            </select>
+            <input class="button" id="order-button" type="submit" name="order-button" value="Order Now"> <!-- 'Order Now' button -->
+          </form>
+        </aside>
+      </section>
+      <section>
+        <h3><strong>You may also like</strong></h3>  <!-- bold font -->
+        <ul id="photos">   <!-- used 'display:flex' in this tag to align the photos in a row -->
+          <li><strong>White bouquet</strong><a href="#"><img src="./images/white400_square.png" alt=""></a></li>  <!-- used anchor tag to make the photo clickable -->
+          <li><strong>Orange bouquet</strong><a href="#"><img src="./images/gift.png" alt=""></a></li>    <!-- put the title of the photo with bold font -->
+          <li><strong>Tulip bouquet</strong><a href="#"><img src="./images/tulips_square.png" alt=""></a></li>  <!-- used href="#" for dummy links -->
+          <li><strong>Small bouquet</strong><a href="#"><img src="./images/wedding_Square.jpg" alt=""></a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <i class="fab fa-twitter"></i>  <!-- twitter icon -->
+      <a href="https://www.twitter.com">@millflowers</a>   <!-- goes to twitter.com when clicked -->
+    </footer>
+  </body>
+</html>

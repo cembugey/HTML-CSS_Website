@@ -1,0 +1,16 @@
+{
+  "name": "html-css_project",
+  "version": "1.0.0",
+  "description": "GitHub pages: * https://cembugey.github.io/HTML-CSS_Website/index.html * https://cembugey.github.io/HTML-CSS_Website/checkout.html",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d website"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://cembugey.github.io/HTML-CSS-Website",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
