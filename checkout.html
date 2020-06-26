@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout page</title>  <!-- Title of the page -->
+    <link rel="stylesheet" href="./CSS/style.css">   <!-- Link to my css file -->
+    <!-- Link to fontawesome.com to use icons: -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+  </head>
+  <body>
+    <header>
+      <nav id="topnav">    <!-- First navbar -->
+        <ul>
+          <li><a href="checkout.html">Checkout</a></li>   <!-- Added link to checkout.html file -->
+          <li><a href="#">Basket</a></li>    <!-- Item of the first navbar -->
+          <li><a href="#">My Account</a></li>      <!-- Item of the first navbar -->
+        </ul>
+      </nav>
+      <address>   <!-- address tag to put the contact details -->
+         <i class="fas fa-mobile-alt"></i>     <!-- phone icon -->
+         <a href="tel:+3530614486165">+353 (0)61 4486165</a>    <!-- added 'tel:' to href to open a phone dialler -->
+         <i class="fas fa-at"></i>    <!-- @ icon -->
+         <a href="mailto:info@millflowers.ie">info@millflowers.ie</a>    <!-- added 'mailto:' to href to open an email client -->
+      </address>
+      <a href="#"><img src="./images/logo3.png" alt=""></a>     <!-- used anchor tag to make the photo clickable -->
+      <p><em>ARTISAN FLOWER ARRANGEMENTS YOU WILL LOVE</em></p>     <!-- made italic -->
+      <nav id = "navbar-2">   <!-- my second navbar -->
+        <ul>
+          <li><a href="#">HOME</a></li>     <!-- Item of the second navbar -->
+          <li><a href="#">ABOUT US</a></li>      <!-- Item of the second navbar -->
+          <li><a href="index.html">BUY ONLINE</a></li>     <!-- Added link to product.html file -->
+          <li><a href="#">WEDDINGS</a></li>    <!-- Item of the second navbar -->
+          <li><a href="#">CONTACT US</a></li>     <!-- Item of the second navbar -->
+       </ul>
+     </nav>
+    </header>
+    <main>
+      <h2>Checkout</h2>
+      <form method="post" action="checkout.php">  <!-- set up to go to "checkout.php" once the form is submitted -->
+        <fieldset>  <!-- The first fieldset -->
+          <legend><strong>Delivery Information</strong></legend>
+          <!-- Sorry for using divs, i couldn't find a better way to make grids
+          I used grids to put the labels to the left and inputs to the right -->
+          <div class="grid1">  <!-- My left container for the labels in the form -->
+            <!-- I connected labels and inputs using 'for'&'id' pairs
+            I gave the same class value to each label in order to put them inside my left container -->
+            <label class="form-label" for="deliveryDate">Delivery date</label>  <!-- I used 'id' to put more spacing after below element: -->
+            <label class="form-label" id="lblDeliveryInst" for="deliveryInst">Special Delivery Instructions</label>
+            <label class="form-label" for="fName">Recipient Firstname</label>
+            <label class="form-label" for="sName">Recipient Surname</label>
+            <label class="form-label" for="address1">Address 1</label>
+            <label class="form-label" for="address2">Address 2</label>
+            <label class="form-label" for="town">Town/City</label>
+            <label class="form-label" for="country">Country</label>
+            <label class="form-label" for="eirCode">Eircode</label>
+            <label class="form-label" for="cardMessage">Card Message</label>
+          </div>
+
+          <div class="grid2">  <!-- My right container for the input elements in the form -->
+            <!-- I connected labels and inputs using 'for'&'id' pairs
+            I gave the same class value to each input element in order to put them inside my right container -->
+            <input id="deliveryDate" class="form-input" type="text" name="deliveryDate" value=""  placeholder="dd/mm/yyyy">
+            <textarea id="deliveryInst" class="form-input" name="deliveryInst" rows="3" cols="105"></textarea>
+            <input id="fName" class="form-input" type="text" name="fName" value="" >
+            <input id="sName" class="form-input" type="text" name="sName" value="" >
+            <input id="address1" class="form-input" type="text" name="address1" value="" >
+            <input id="address2" class="form-input" type="text" name="address2" value="" >
+            <input id="town" class="form-input" type="text" name="town" value="" >
+            <input id="country" class="form-input" type="text" name="country" value="" >
+            <input id="eirCode" class="form-input" type="text" name="eirCode" value="" >
+            <p id="cardMessage2"><em>For example: Happy birthday, Have a fabulous day love Kevin</em></p>
+            <textarea id="cardMessage" class="form-input" name="cardMessage2" rows="3" cols="105"></textarea>
+          </div>
+       </fieldset>
+       <fieldset>  <!-- The first fieldset -->
+          <legend><strong>Payment Information</strong></legend>
+          <!-- I used div to group labels to make grids, couldn't find a better way -->
+          <div class="grid1">   <!-- My left container -->
+            <!-- assigned the same class to each label to put them inside my left container
+            used id's to adjust the spacing between labels -->
+            <label class="form-label" for="cardName">Name on card</label>
+            <label class="form-label" id="lblcardType" >Credit card type</label>
+            <label class="form-label" for="cardNumber">Card Number</label>
+            <label class="form-label" for="expiry">Expiry</label>
+            <label class="form-label" for="verifNumber">Card verification number</label>
+            <label class="form-label" for="email">Email</label>
+            <label class="form-label" for="phone">Phone</label>
+          </div>
+          <!-- I used div to group inputs to make grids, couldn't find a better way -->
+          <div class="grid3">   <!-- My right container to put the input elements -->
+            <!-- I connected labels and inputs using 'for'&'id' pairs
+            I gave the same class value to each input element in order to put them inside my right container -->
+             <input id="cardName" class="form-input" type="text" name="cardName" value="" >
+             <div class="form-input" id="radio-form">
+                <div id="first-radio-line">  <!-- Used div to group the 1st radio button and its label-->
+                   <input type="radio" id="radio1" name="radio1">
+                   <label for="radio1">Visa</label>
+                </div>
+                <div>  <!-- Used div to group the 2nd radio button and its label-->
+                   <input type="radio" id="radio2" name="radio2">
+                   <label for="radio2">Mastercard</label>
+                </div>
+             </div>
+             <input id="cardNumber" class="form-input" type="text" name="cardNumber" value="" >
+             <div>  <!-- used div to adjust the layout, i didn't know what else to do -->
+                <select id="expiry" class="form-input">   <!-- 1st drop down list-->
+                  <option>01-January</option>
+                  <option>02-February</option>
+                  <option>03-March</option>
+                  <option>04-April</option>
+                  <option>05-May</option>
+                  <option>06-June</option>
+                  <option>07-July</option>
+                  <option>08-August</option>
+                  <option>09-September</option>
+                  <option>10-October</option>
+                  <option>11-November</option>
+                  <option>12-December</option>
+                </select>
+                <select id="expiry-2" class="form-input">  <!-- 2nd drop down list-->
+                  <option>2024</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                  <option>2021</option>
+                  <option>2020</option>
+                </select>
+             </div>
+             <input id="verifNumber" class="form-input" type="text" name="verifNumber" value="" >
+             <input id="email" class="form-input" type="text" name="email" value="" >
+             <input id="phone" class="form-input" type="text" name="phone" value="" >
+          </div>
+       </fieldset>
+       <!-- 'Place Order' button at the bottom of the form -->
+       <input class="button place-order" type="submit" name="place-order-button" value="Place Order">
+      </form>
+    </main>
+    <footer>
+      <i class="fab fa-twitter"></i>   <!-- twitter icon -->
+      <a href="https://www.twitter.com">@millflowers</a>    <!-- goes to twitter.com when clicked -->
+    </footer>
+  </body>
+</html>

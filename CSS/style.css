@@ -1,0 +1,281 @@
+/* Started with generic selectors in order to overwrite later if necessary.
+Firstly i styled product.html and common parts, after then styled checkout.html
+Selectors are ordered from the top of the page to the bottom*/
+/* Common CSS for product.html & checkout.html */
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+  /* My font stack(ideal, alternative, backup) */
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header {
+  margin-top: 20px;
+}
+
+p {
+  color: #7A7C7D;
+}
+/* CSS to create the first navbar */
+#topnav {
+  background-color: #A0C33F;
+  overflow: hidden;
+}
+#topnav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #A0C33F;
+}
+#topnav li {
+  float: right;
+  display: inline;
+}
+#topnav a {
+  display: block;
+  padding: 14px 16px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Hover effects for the 1st navbar, I've got the effect from this website:
+source: https://codepen.io/maheshambure21/pen/QwXaRw */
+#topnav ul li a:after {
+  text-align: left;
+  margin: 0;
+  opacity: 0;
+}
+#topnav ul li a:hover {
+  color: #A0C33F;
+  background-color: #fff;
+  z-index: 1;
+  transition: 2s;
+}
+#topnav ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+/* style icons */
+i {
+  color: #A0C33F;
+}
+/* Justify contact email and phone number to the right */
+address {
+  float: right;
+  margin-top: 5px;
+}
+
+address a{
+  text-decoration: none;  /* remove the underline */
+  /* Fonty style was italic by default, so i made it normal */
+  font-style: normal;
+  color: #7A7C7D;
+}
+/* Added click effect to contact email and phone number */
+address a:active{
+  font-size: 90%;
+}
+/* END of Common CSS for product.html & checkout.html */
+
+/* To give grey font color to selected tags */
+.grey-color {
+  color: #7A7C7D;
+}
+/* To give grey font color */
+label {
+  color: #7A7C7D;
+}
+/* Styling to make a horizontal navigation bar */
+#navbar-2 {
+  overflow: hidden;
+}
+#navbar-2 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+#navbar-2 li {
+  float: left;
+  display: inline;
+}
+#navbar-2 a {
+  display: block;
+  padding: 14px 6px 14px 6px;
+  color: #A0C33F;
+  text-decoration: none;
+  text-align: center;
+}
+/* Hover effects for the 2nd navbar, I got the effect from this website:
+source: https://codepen.io/maheshambure21/pen/QwXaRw */
+#navbar-2 ul li a{
+  position: relative;
+}
+#navbar-2 ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #A0C33F;
+  height: 1px;
+}
+#navbar-2 ul li a:hover:after {
+  width: 100%;
+}  /* End of the hover effect */
+
+/* Click effect for the 2nd navbar */
+#navbar-2 ul li a:active {
+  top: 3px;
+}  /* End of the click effect */
+/* To give green color to the headings: */
+h1, h2, h3, legend {
+  color: #A0C33F;
+}
+/* Headings use the Georgia font with a serif font as back up. */
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+/* To align the big image and paragraphs in a row: */
+#box-container {
+  display: flex;
+}
+
+h1 {
+  font-size: 30px;
+}
+/* To put space between the image and content within aside tag: */
+aside {
+  margin-left: 30px;
+}
+/* Set the color of the horizontal line */
+hr {
+  color: #92999C;
+}
+/* Styling for the buttons */
+.button {
+  background-color: #A0C33F;
+  color: white;
+  padding: 8px 15px 8px 15px;
+}
+/* Styling for 'Order Now' button */
+#order-button {
+  margin-top: 40px;
+  padding: 15px 30px;
+  float: right;
+}
+
+#photos {
+  list-style-type: none;
+  display: flex;  /* To place the set of images in the same row*/
+  padding-left: 0px;
+}
+
+#photos li{
+  display: inline-block;
+  color: #7A7C7D;
+  border: 2px solid #A0C33F;
+  margin: 5px;
+  width: 250px;
+  padding: 15px 0px 15px 10px;
+}
+
+#photos img {
+  height: 218px;
+  width: 218px;
+  align-items: center;
+}
+
+
+/* CSS FOR CHECKOUT.HTML */
+fieldset {
+  border: 2px solid #A0C33F;
+
+}
+/* Container for the labels of the form */
+.grid1 {
+  width: 225px;
+  float: left;   /* Justify the labels to the left */
+}
+/* Container for the input tags of the form(1st fieldset) */
+.grid2 {
+    float: right;   /* Justify the input tags to the right */
+    margin-right: 267px;
+}
+/* Container for the input tags of the form(2nd fieldset) */
+.grid3 {
+    float: right;   /* Justify the input tags to the right */
+    margin-right: 275px;
+    padding-top: 5px;
+}
+/* Styling for the labels of the form */
+.form-label {
+  display: block;   /* Make new line after each label: */
+  margin: 8px 0px;
+}
+/* Styling for the inputs of the form */
+.form-input {
+  border: 2px solid #A0C33F;
+  width: 450px;
+  margin: 5px 0px;
+}
+/* Adjust spacing between some of the labels and inputs */
+#lblDeliveryInst {
+  margin-bottom: 55px;
+}
+#lblcardType {
+  margin-bottom: 35px;
+}
+#fname {
+  margin-top: 0px;
+}
+#cardMessage2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 13px;
+}
+/* Styling for input tags with type="text" */
+input[type=text] {
+  display: block;  /* To make a new line after each input */
+  width: 175px;   /* Assigned width */
+}
+#expiry {
+  width: 110px;
+}
+#expiry-2 {
+  width: 65px;
+}
+#radio-form {
+  border: 0px;
+}
+#first-radio-line {
+  display: block;
+}
+/* 'Place Order' button */
+.place-order {
+  float: right;
+  padding: 13px 30px;
+  margin-top: 15px;
+}
+/* To put some space after the form */
+form {
+  margin-bottom: 70px;
+}
+/* CSS (common for product.html & checkout.html) */
+footer {
+  text-align: right;
+  margin-bottom: 80px;
+}
+/* Styling for the twitter link */
+footer a{
+  text-decoration: none;  /* remove the underline */
+  color: #7A7C7D;
+}
